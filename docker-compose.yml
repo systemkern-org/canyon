@@ -12,3 +12,19 @@ services:
     environment:
     - POSTGRES_USER=postgres
     - POSTGRES_PASSWORD=postgres
+
+  client:
+    build:
+      context: .
+      dockerfile: ./client/Dockerfile
+  #    args:
+  #      CORS_ORIGINS: "http://localhost:8080,https://localhost:8080"
+  #      D_USR: "postgres"
+  #      D_PW: "postgres"
+  #      D_CONSTRING: "jdbc:postgresql://database:5432/postgres"
+  #      D_DRV: org.postgresql.Driver
+  #  ports:
+  #    - 8084:8084
+  #  depends_on:
+  #    - database
+  #    - machine-learning-service
