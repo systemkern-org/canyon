@@ -1,0 +1,14 @@
+version: "3.0"
+services:
+  repository:
+    hostname: 'localhost'
+    image: gitlab/gitlab-ce:latest
+    restart: always
+    ports:
+    - 22:22
+    - 80:80
+    - 433:433
+    - 8080:8080
+    environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=postgres
